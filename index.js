@@ -6,6 +6,11 @@ var app = express();
 
 app.set('port', (process.env.PORT || 8080));
 
+var options = { 
+  useErrorHandler: false, 
+  continueMiddleware: false,
+};
+
 app.oauth = new OAuthServer({
   model: {}, // See https://github.com/oauthjs/node-oauth2-server for specification
 });
