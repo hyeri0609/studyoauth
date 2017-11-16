@@ -1,10 +1,5 @@
-
-/**
- * Module dependencies.
- */
-
-var pg = require('pg-promise')(process.env.DATABASE_URL);
-
+var pgp = require('pg-promise')();
+var pg = pgp(process.env.DATABASE_URL);
 /*
  * Get access token.
  */

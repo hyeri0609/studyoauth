@@ -17,15 +17,14 @@ app.set('port', (process.env.PORT || 8080));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-var options = { 
-  useErrorHandler: false, 
-  continueMiddleware: false,
-};
+// var options = { 
+//   useErrorHandler: false, 
+//   continueMiddleware: false,
+// };
 
 // Add OAuth server.
 app.oauth = new oauthServer({
-  model: require('./model'),
-  options: options
+  model: require('./model')
 });
 
 

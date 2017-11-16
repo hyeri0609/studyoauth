@@ -10,7 +10,7 @@
     "pg-stop": "sudo service postgresql stop",
     "redis": "sudo service redis-server start",
     "redis-stop": "sudo service redis-server stop",
-    "xpg": "node postgresql/index.js",
+    "xpg": "DATABASE_URL=postgres://ubuntu@localhost:5432/studyoauth node postgresql/index.js",
     "xredis": "node redis/index.js"
   },
   "repository": {
